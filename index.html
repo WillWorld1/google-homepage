@@ -12,6 +12,15 @@
         justify-content: end;
         font-family: Helvetica, Arial, sans-serif;
     }
+    a {
+        font-size: 14px;
+        color: rgb(20, 20, 20);
+        text-decoration: none;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
     .search-box-wrapper {
         display: flex;
         align-items: center;
@@ -49,8 +58,44 @@
         font-size: 16px;
         width: 100%;
     }
-    .search-box-wrapper:hover, button:hover {
+    .search-box-wrapper:hover, .search-button-wrapper button:hover {
         box-shadow: 0px 0px 2px 0px #757575;
+    }
+    .navbar-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px;
+    }
+    .navbar1, .navbar2 {
+        display: flex;
+        align-items: center;
+    }
+    .navbar1 a, .navbar2 a {
+        margin: 10px;
+    }
+    #apps-icon {
+        color: rgb(102, 102, 102);
+        background-color: #00000000;
+        border-radius: 50%;
+        border-style: solid;
+        padding: 8px;
+        border-width: 0px;
+        margin: 5px;
+    }
+    #apps-icon:hover {
+        background-color: #ebebeb;
+    }
+    #sign-in {
+        font-size: 15px;
+        color: white;
+        background-color: #1a73e8;
+        padding: 10px 25px 10px 25px;
+        border-radius: 5px;
+        border-width: 0px;
+    }
+    #sign-in:hover {
+        background-color: #4386fa;
     }
 </style>
 <head>
@@ -60,6 +105,18 @@
     <link rel="shortcut icon" href="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png"/>
 </head>
 <body> 
+    <header class="navbar-wrapper">
+        <div class="navbar1">
+            <a href="">About</a>
+            <a href="">Store</a>
+        </div>
+        <div class="navbar2">
+            <a href="">Gmail</a>
+            <a href="">Images</a>
+            <button id="apps-icon"><span class="material-icons">apps</span></button>
+            <button id="sign-in">Sign in</button>
+        </div>
+    </header>
     <div class="main">
         <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo">
         <div class="search-box-wrapper">
